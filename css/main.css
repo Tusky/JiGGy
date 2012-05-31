@@ -10,11 +10,11 @@ html, body {
 	height: 100%;
 	margin: 0 auto -30px;
 }
-.footer, .push {
+.debug, .push {
 	height: 30px;
 }
 
-.footercontent{
+.debuginfo{
 	margin: 0 auto;
 	width: 500px;
 	background-color: #e3e3e3;
@@ -33,17 +33,40 @@ html, body {
 	width: 100%;
 }
 
-.admin_menu_button{
-	color: white;
-	width: 40px;
-	display: inline-block;
-	text-align: center;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+#adminbar ul{
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0px;
 }
 
-.admin_menu_button:hover{
+#adminbar ul li{
+	display: block;
+	position: relative;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.admin_menu_button{
+	color: black;
+}
+
+.admin_menu_button ul{
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	left: 0px;
+	background-color: #e7e7e7;
+	list-style: none;
+}
+
+.admin_menu_button ul li{
+	clear: both;
+	float: none;
+	display: block;
+}
+
+#adminbar li:hover{
 	background-color: gray;
 }
 
