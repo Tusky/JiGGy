@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px;
+}
+.footer, .push {
+	height: 30px;
+}
+
+.footercontent{
+	margin: 0 auto;
+	width: 500px;
+	background-color: #e3e3e3;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 5px;	
+}
+
+#adminbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #e7e7e7;
+	width: 100%;
+}
+
+.admin_menu_button{
+	color: white;
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.admin_menu_button:hover{
+	background-color: gray;
+}
+
+body{
+	background: white url("../images/game.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
