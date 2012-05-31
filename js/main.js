@@ -6,4 +6,8 @@ if (adminMode){
 
 if(debugMode){
 	$.getScript("js/debug.js");
+}else{
+	$().ready(function(){
+		$(".debug, .debuginfo").css("display","none");
+	})
 }
