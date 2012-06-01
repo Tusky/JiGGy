@@ -11,8 +11,8 @@ function remove_player(){
 }
 
 function about(){
-	$("#daGame").after('<div id="about_dialog" title="About"><p>Coded by Tusk.</p></div>');
-	$("#about_dialog").dialog({'resizable': false, 'height': 100, 'width': 200,'modal':true});
+	$("#daGame").after('<div id="about_dialog" title="About"><p>Coded by Tusk.</p><br /><p>Frameworks used making this:<br /><a href="http://jquery.com/" target="_blank">jQuery</a><br /><a href="http://jqueryui.com/" target="_blank">jQuery UI</a></p></div>');
+	$("#about_dialog").dialog({'resizable': false, 'height': 250, 'width': 300,'modal':true});
 }
 
 function add_enemy(){
