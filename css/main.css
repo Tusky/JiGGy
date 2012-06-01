@@ -17,7 +17,8 @@ html, body {
 .debuginfo{
 	margin: 0 auto;
 	width: 500px;
-	background-color: #e3e3e3;
+	background-color: #C70000;
+	border: 1px dashed yellow;
 	text-align: center;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
