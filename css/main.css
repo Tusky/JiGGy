@@ -8,10 +8,10 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -30px;
+	margin: 0 auto -32px;
 }
 .debug, .push {
-	height: 30px;
+	height: 32px;
 }
 
 .debuginfo{
