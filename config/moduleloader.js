@@ -1,4 +1,5 @@
 var modules = [
+				"core",
 				"adminmenu",
 				"debugmode",
 				"helloworld",

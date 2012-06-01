@@ -12,10 +12,10 @@ function createAdminMenu(){
 	addMenu={ none: "Add", add_town: "Town",add_player: "Player", add_enemy: "Enemy" };
 	removeMenu={ none: "Remove", remove_player: "Player", remove_enemy: "Enemy" };
 	aboutMenu={ about: "About" };
-	return createMenuFrom(addMenu,removeMenu,aboutMenu);
+	return createAdminMenuFrom(addMenu,removeMenu,aboutMenu);
 }
 
-function createMenuFrom () {
+function createAdminMenuFrom () {
 	var element="";
 	for (var i=0; i < arguments.length; i++) {
 		j=0;
