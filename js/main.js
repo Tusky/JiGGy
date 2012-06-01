@@ -1,17 +1,24 @@
 if (adminMode){
 	$.getScript("js/admin.js", function(){
+		$("head").append("<link>");
+	    $("head").children(":last").attr({
+			rel:  "stylesheet",
+			type: "text/css",
+			href: "css/admin.css"
+	    });
 		$("#adminbar").html(createAdminMenu());
 	});
 }
 
 if(debugMode){
+	$("head").append("<link>");
+	$("head").children(":last").attr({
+		rel:  "stylesheet",
+		type: "text/css",
+		href: "css/debug.css"
+	});
 	$.getScript("js/debug.js");
-}else{
-	$().ready(function(){
-		$(".debug, .debuginfo").css("display","none");
-	})
 }
-
 
 function add_player(){
 	console.log("Adding a player...");

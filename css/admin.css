@@ -1,0 +1,45 @@
+
+#adminbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #e7e7e7;
+	width: 100%;
+}
+
+#adminbar ul{
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0px;
+}
+
+#adminbar ul li{
+	display: block;
+	position: relative;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.admin_menu_button{
+	color: black;
+}
+
+.admin_menu_button ul{
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	left: 0px;
+	background-color: #e7e7e7;
+	list-style: none;
+}
+
+.admin_menu_button ul li{
+	clear: both;
+	float: none;
+	display: block;
+}
+
+#adminbar li:hover{
+	background-color: gray;
+}

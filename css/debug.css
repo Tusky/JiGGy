@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -32px;
+}
+.debug, .push {
+	height: 32px;
+}
+
+.debuginfo{
+	margin: 0 auto;
+	width: 500px;
+	background-color: #C70000;
+	border: 1px dashed yellow;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 5px;	
+}
