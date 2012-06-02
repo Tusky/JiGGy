@@ -9,3 +9,5 @@ This engine should be modular by making it easy to add your own extensions.
 * Database: SQLite
 * Scripting: Javascript
 * Backend: node.js
+
+### You have to run it via a webserver.
