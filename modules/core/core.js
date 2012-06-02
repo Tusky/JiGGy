@@ -45,3 +45,11 @@ function createAdminMenuFrom () {
 	};
 	return element;
 }
+
+function formatNumber(num, length) {
+    var ns = "" + num;
+    while (ns.length < length) {
+        ns = "0" + ns;
+    }
+    return ns;
+}
