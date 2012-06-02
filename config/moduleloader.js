@@ -1,9 +1,14 @@
 var modules = [
 				"core",
 				"adminmenu",
+				"music",
 				"debugmode",
 				"helloworld",
 			  ]
+
+var music = [
+				"music01"
+]
 
 $(document).ready(function() {
 	for (var i=0; i < modules.length; i++) {
