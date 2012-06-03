@@ -33,13 +33,20 @@ function nextSong(){
 
 $().ready(function() {
 	addToAdminMenu( { none: "Music", music_off: "Off", music_on: "On" } );
-	nextSong();
+	if( readCookie("music") == "off" ){
+		nextSong();
+		music_off();
+	}else{
+		nextSong();
+	}
 });
 
 function music_on(){
+	createCookie("music","on",3650);
 	backgroundmusic.play();
 }
 
 function music_off(){
+	createCookie("music","off",3650);
 	backgroundmusic.pause();
 }
