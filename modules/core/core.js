@@ -21,29 +21,8 @@ function createMenuFrom () {
 
 function addToAdminMenu(){
 	for (var i=0; i < arguments.length; i++) {
-		$('#adminbar > ul:last').before( createAdminMenuFrom(arguments[i]) );
+		$('#adminbar > ul:last').before( createMenuFrom(arguments[i]) );
 	}
-}
-
-function createAdminMenuFrom () {
-	var element="";
-	for (var i=0; i < arguments.length; i++) {
-		j=0;
-		for (key in arguments[i]){
-			if( j == 0){
-				if ( key == "none" ){
-					element+='<ul><li class="admin_menu_button"><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
-				}else{
-					element+='<ul><li class="admin_menu_button" onClick="'+key+'()"><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
-				}
-			}else{
-				element+='<li onClick="'+key+'()"><span>'+arguments[i][key]+'</span></li>';
-			}
-			j++;
-		};
-		element+='</ul></li></ul>'
-	};
-	return element;
 }
 
 function formatNumber(num, length) {
