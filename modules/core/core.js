@@ -1,16 +1,21 @@
 function createMenuFrom () {
-	var element="";
+	var element="",
+		liclass="";
 	for (var i=0; i < arguments.length; i++) {
 		j=0;
 		for (key in arguments[i]){
+			if( typeof arguments[i] === 'string' ) {
+				liclass=' class="'+arguments[i]+'"';
+				continue;
+			}
 			if( j == 0){
 				if ( key == "none" ){
-					element+='<ul><li><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
+					element+='<ul><li'+liclass+'><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
 				}else{
-					element+='<ul><li onClick="'+key+'()"><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
+					element+='<ul><li'+liclass+' onClick="'+key+'()"><span class="'+key+'">'+arguments[i][key]+'</span><ul>';
 				}
 			}else{
-				element+='<li onClick="'+key+'()"><span>'+arguments[i][key]+'</span></li>';
+				element+='<li'+liclass+' onClick="'+key+'()"><span>'+arguments[i][key]+'</span></li>';
 			}
 			j++;
 		};
