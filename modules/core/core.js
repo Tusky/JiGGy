@@ -1,3 +1,4 @@
+/* this creates a standerdized HTML menu */
 function createMenuFrom () {
 	var element="",
 		liclass="";
@@ -23,13 +24,14 @@ function createMenuFrom () {
 	};
 	return element;
 }
-
+/* This adds a menu element to the adminbar */
 function addToAdminMenu(){
 	for (var i=0; i < arguments.length; i++) {
 		$('#adminbar > ul:last').before( createMenuFrom(arguments[i]) );
 	}
 }
 
+/* this formats numbers to the given length: 01 or 001 etc. */
 function formatNumber(num, length) {
     var ns = "" + num;
     while (ns.length < length) {
@@ -38,11 +40,13 @@ function formatNumber(num, length) {
     return ns;
 }
 
+/* Creates a cookie */
 function createCookie(name,value,expdate){
 	setCookie(name,value,-1);
 	setCookie(name,value,expdate);
 }
 
+/* Sets a cookie */
 function setCookie(name,value,expdate){
 	if (expdate) {
 		var date = new Date();
@@ -53,6 +57,7 @@ function setCookie(name,value,expdate){
 	document.cookie = name+"="+value+expires+"; path=/";
 }
 
+/* Reads a cookie value */
 function readCookie(name){
 	var nameEQ = name + "=";
 	var ca = document.cookie.split(';');
@@ -62,4 +67,34 @@ function readCookie(name){
 		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
 	}
 	return null;
+}
+
+/* When the game ends for any reason show what the game module wants to load then show game menu */
+function die(){
+	//fancy call for the actual gamemodule's die();
+	gamemenu();
+}
+
+/* sets the game menu visible */
+function gamemenu(){
+	$('.game_menu').show();
+}
+/* Centers an object in the screen */
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", Math.max(0, (($(window).height() - this.outerHeight()) / 2) + 
+                                                $(window).scrollTop()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - this.outerWidth()) / 2) + 
+                                                $(window).scrollLeft()) + "px");
+    return this;
+}
+
+/* makes a div unselectable */
+jQuery.fn.unselectable = function() {
+	this.attr('unselectable', 'on').css({
+                   '-moz-user-select':'none',
+                   '-webkit-user-select':'none',
+                   'user-select':'none',
+                   '-ms-user-select':'none'
+               })
 }

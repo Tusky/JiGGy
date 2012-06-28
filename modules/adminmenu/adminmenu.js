@@ -1,3 +1,4 @@
+/* Creates the Default admin menu */
 $().ready(function(){
 	$('#daGame').before('<div id="adminbar"></div>');
 	$('#adminbar').html(createAdminMenu());

@@ -1,16 +1,14 @@
+/* Load the following modules */
 var modules = [
 				"core",
 				"adminmenu",
 				"music",
+				"gamemenu",
 				"debugmode",
-				"helloworld",
 			  ]
 
-var music = [
-				"music01"
-]
-
 $(document).ready(function() {
+	/* go through every modules and load it's js and css file */
 	for (var i=0; i < modules.length; i++) {
 		path='modules/'+modules[i]+'/'+modules[i];
 		if( UrlExists(path+'.css') ){
@@ -23,9 +21,18 @@ $(document).ready(function() {
 			script.src = path+'.js';
 			$("head").append( script );
 		}
+		/* after everthing is loaded, it's safely assumed by now, set the focus to the game */
+		$('#daGame').focus();
 	};
+
+	/* If the button pressed is Escape show Game Menu, if shown then hide it */
+	$('#daGame').keydown(function(e){
+		if( e.which == 27 || e.keyCode == 27 )
+			$('.game_menu').toggle();
+	})
 });
 
+/* Check if url exists before adding it to the HTML */
 function UrlExists(url) {
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);

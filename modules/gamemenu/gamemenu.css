@@ -1,0 +1,30 @@
+#daGame{
+	width: 200px;
+	height: 200px;
+}
+
+.game_menu{
+	padding: 20px;
+	background: #eee;
+}
+
+.game_menu ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.game_menu ul li{
+	color: white;
+	text-align: center;
+	cursor: normal;
+	background: #555;
+	box-shadow: 0px 0px 5px #888;
+	padding: 10px;
+	margin: 5px;
+}
+
+.game_menu ul li:hover{
+	background: #888;
+	box-shadow: 0px 0px 5px #555;
+}
