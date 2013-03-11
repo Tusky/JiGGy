@@ -1,11 +1,3 @@
-/* Load the following modules */
-var modules = [
-				"core",
-				"adminmenu",
-				"music",
-				"gamemenu",
-				"debugmode",
-			  ]
 
 $(document).ready(function() {
 	/* go through every modules and load it's js and css file */
