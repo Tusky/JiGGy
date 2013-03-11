@@ -16,12 +16,6 @@ $(document).ready(function() {
 		/* after everthing is loaded, it's safely assumed by now, set the focus to the game */
 		$('#daGame').focus();
 	};
-
-	/* If the button pressed is Escape show Game Menu, if shown then hide it */
-	$('#daGame').keydown(function(e){
-		if( e.which == 27 || e.keyCode == 27 )
-			$('.game_menu').toggle();
-	})
 });
 
 /* Check if url exists before adding it to the HTML */

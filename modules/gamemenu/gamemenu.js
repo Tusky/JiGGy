@@ -7,16 +7,20 @@ $().ready(function(){
 	$('.game_menu').hide().html(createMenuFrom(_new_game, _load_game, _save_game, _exit)).center().unselectable();
 });
 
-function new_game(){
+function game_menu(){
+	$('.game_menu').toggle();
+}
 
+function new_game(){
+	debugLogger("New Game");
 }
 
 function save_game(){
-	
+	debugLogger("Save Game");
 }
 
 function load_game(){
-	
+	debugLogger("Load Game");
 }
 
 function exit(){

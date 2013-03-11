@@ -95,15 +95,7 @@ keyboard = {
 }
 
 $("body").on("keydown",function(e){
-	console.log(e.keyCode)
+	// debugLogger(e.keyCode);
 	KBHandle(keyboard[e.keyCode])
 	e.preventDefault();
-	return false;
 })
-
-
-function KBHandle(pressed){
-	if( pressed == "i" ){
-		console.log("open inventory");
-	}
-}

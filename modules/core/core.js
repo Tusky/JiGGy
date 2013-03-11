@@ -98,3 +98,11 @@ jQuery.fn.unselectable = function() {
                    '-ms-user-select':'none'
                })
 }
+
+function debugLogger(message){
+	/* Sets default message value if not exists */
+	message = message || "no message"
+	if( debugMode ){
+		console.log(message);
+	}
+}
