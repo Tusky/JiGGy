@@ -9,6 +9,7 @@ var modules = [
 				"adminmenu",
 				"keyboard",
 				"music",
+				"audio",
 				"gamemenu",
 				"debugmode",
 			  ]

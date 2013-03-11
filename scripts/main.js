@@ -28,4 +28,12 @@ function KBHandle(pressed){
 		debugLogger("show game menu");
 		game_menu();
 	}
+	if( pressed == "ctrl" ){
+		debugLogger("gun_shot!")
+		play_audio("gun_shot");
+	}
+	if( pressed == "shift" ){
+		debugLogger("gun_reload!")
+		play_audio("gun_reload");
+	}
 }
