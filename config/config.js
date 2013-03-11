@@ -1,4 +1,15 @@
 // If set to true, debugging is active.
-var debugMode	= true;
+debugMode = true;
 // If set to true, adminbar will be displayed on top.
-adminMode	= true;
+adminMode = true;
+
+/* Load the following modules */
+var modules = [
+				"core",
+				"adminmenu",
+				"keyboard",
+				"music",
+				"audio",
+				"gamemenu",
+				"debugmode",
+			  ]

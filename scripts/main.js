@@ -1,13 +1,13 @@
 function add_player(){
-	console.log("Adding a player...");
+	debugLogger("Adding a player...");
 }
 
 function add_town(){
-	console.log("Adding a town...");
+	debugLogger("Adding a town...");
 }
 
 function remove_player(){
-	console.log("Removing a player...");
+	debugLogger("Removing a player...");
 }
 
 function about(){
@@ -16,9 +16,24 @@ function about(){
 }
 
 function add_enemy(){
-	console.log("Adding an enemy...");
+	debugLogger("Adding an enemy...");
 }
 
 function remove_enemy(){
-	console.log("Removing an enemy...");
+	debugLogger("Removing an enemy...");
+}
+
+function KBHandle(pressed){
+	if( pressed == "esc" ){
+		debugLogger("show game menu");
+		game_menu();
+	}
+	if( pressed == "ctrl" ){
+		debugLogger("gun_shot!")
+		play_audio("gun_shot");
+	}
+	if( pressed == "shift" ){
+		debugLogger("gun_reload!")
+		play_audio("gun_reload");
+	}
 }
